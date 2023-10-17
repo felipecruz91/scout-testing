@@ -53,7 +53,7 @@ jobs:
           targets: default
           set: |
             *.tags=${{ steps.meta.outputs.tags }}
-            *.output=type=docker
+            *.output=type=registry
             *.cache-from=type=gha
             *.cache-to=type=gha,mode=max
           push: true
