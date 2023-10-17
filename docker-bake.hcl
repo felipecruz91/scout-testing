@@ -4,8 +4,5 @@ target "default" {
 		"attest=type=sbom",
 		"attest=type=provenance,mode=max"
 	]
-	output = [
-		"type=registry",
-		"type=docker"
-	]
+	output = ["type=registry"]
 }
