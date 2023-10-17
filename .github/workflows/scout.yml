@@ -12,7 +12,7 @@ on:
 env:
   # Use docker.io for Docker Hub if empty
   REGISTRY: docker.io
-  IMAGE_NAME: davidkarlsson416/scout
+  IMAGE_NAME: felipecruz1638514/scout-testing
   SHA: ${{ github.event.pull_request.head.sha || github.event.after }}
   # Use `latest` as the tag to compare to if empty, assuming that it's already pushed
   # COMPARE_TAG: latest
@@ -33,7 +33,7 @@ jobs:
       - name: Log into registry ${{ env.REGISTRY }}
         uses: docker/login-action@v3
         with:
-          username: ${{ secrets.DOCKER_USER }}
+          username: felipecruz1638514
           password: ${{ secrets.DOCKER_PAT }}
       - name: Extract Docker metadata
         id: meta
@@ -62,5 +62,5 @@ jobs:
         with:
           command: policy
           debug: true
-          organization: davidkarlsson416
+          organization: felipecruz1638514
           image: ${{ steps.meta.outputs.tags }}
