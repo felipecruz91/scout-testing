@@ -58,5 +58,6 @@ jobs:
         uses: felipecruz91/scout-action@main
         with:
           command: policy
+          debug: true
           organization: davidkarlsson416
           image: ${{ steps.meta.outputs.tags }}
