@@ -15,7 +15,7 @@ env:
   IMAGE_NAME: davidkarlsson416/scout
   SHA: ${{ github.event.pull_request.head.sha || github.event.after }}
   # Use `latest` as the tag to compare to if empty, assuming that it's already pushed
-  COMPARE_TAG: latest
+  # COMPARE_TAG: latest
 
 jobs:
   build:
@@ -53,7 +53,7 @@ jobs:
           targets: default
           set: |
             *.tags=${{ steps.meta.outputs.tags }}
-            *.outputs=type=docker
+            *.output=type=docker
             *.cache-from=type=gha
             *.cache-to=type=gha,mode=max
           push: true
