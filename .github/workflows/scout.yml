@@ -51,10 +51,10 @@ jobs:
         with:
           files: docker-bake.hcl
           targets: default
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
           set: |
             *.tags=${{ steps.meta.outputs.tags }}
+            *.cache-from: type=gha
+            *.cache-to: type=gha,mode=max
       - name: Evaluate policy
         uses: felipecruz91/scout-action@main
         with:
