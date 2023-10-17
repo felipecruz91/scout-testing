@@ -1,5 +1,5 @@
 target "default" {
-	tags = ["felipecruz/scout-testing:latest"]
+	tags = ["felipecruz1638514/scout-testing:latest"]
 	provenance = [
 		"attest=type=sbom",
 		"attest=type=provenance,mode=max"
