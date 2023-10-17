@@ -54,8 +54,8 @@ jobs:
           set: |
             *.tags=${{ steps.meta.outputs.tags }}
             *.outputs=type=docker
-            *.cache-from: type=gha
-            *.cache-to: type=gha,mode=max
+            *.cache-from=type=gha
+            *.cache-to=type=gha,mode=max
           push: true
       - name: Evaluate policy
         uses: felipecruz91/scout-action@main
